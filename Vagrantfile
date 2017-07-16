@@ -17,4 +17,12 @@ Vagrant.configure(2) do |config|
       v.memory = 2048
     end
   end
+  config.vm.define "prod" do |d|
+    d.vm.box = "ubuntu/trusty64"
+    d.vm.hostname = "cd"
+    d.vm.network "private_network", ip: "10.100.198.201"
+    d.vm.provider "virtualbox" do |v|
+      v.memory = 1024
+    end
+  end
 end
