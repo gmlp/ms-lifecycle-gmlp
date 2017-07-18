@@ -1,0 +1,12 @@
+- hosts: etcd
+  remote_user: vagrant
+  serial: 1
+  sudo: yes
+  vars:
+    - registrator_protocol: etcd
+    - registrator_port: 2379
+  roles: 
+    - common
+    - docker
+    - etcd
+    - registrator

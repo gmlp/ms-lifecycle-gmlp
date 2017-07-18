@@ -1,0 +1,11 @@
+- hosts: registrator
+  remote_user: vagrant
+  serial: 1
+  sudo: yes
+  vars: 
+    - registrator_name: registrator-consul
+  roles:
+    - docker
+    - consul
+    - registrator
+
