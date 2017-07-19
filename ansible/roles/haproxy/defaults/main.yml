@@ -1,0 +1,10 @@
+directories:
+    - /data/haproxy/config
+
+files: [
+    {src: 'haproxy.cfg.orig', dest: '/data/haproxy/config/haproxy.cfg.orig'}
+]
+
+ports:
+    - 80:80
+

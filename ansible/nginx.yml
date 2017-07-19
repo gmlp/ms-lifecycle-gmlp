@@ -1,0 +1,14 @@
+- hosts: proxy
+  remote_user: vagrant
+  serial: 1
+  sudo: yes
+  vars:
+      - consul_extra: "-server -bootstrap -ui"
+  roles:
+    - common
+    - docker
+    - docker-compose
+    - consul
+    - registrator
+    - consul-template
+    - nginx
