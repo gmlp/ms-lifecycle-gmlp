@@ -6,3 +6,5 @@ registry_host_dir: /vagrant/registry
 consul_extra: ""
 registry_url: 10.100.198.200:5000/
 proxy_url: http://{{ facter_ipaddress_eth1  }}
+agent_user: vagrant
+jenkins_version: 1.642.4
